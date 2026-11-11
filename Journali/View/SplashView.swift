@@ -25,7 +25,7 @@ struct SplashView: View {
 
                 // Tagline
                 Text("Your thoughts, your story")
-                    .font(.system(size: 24, weight: .regular))
+                    .font(.system(size: 23, weight: .regular))
                     .foregroundStyle(Color(red: 0.64, green: 0.60, blue: 0.60))
 
                 Spacer()
