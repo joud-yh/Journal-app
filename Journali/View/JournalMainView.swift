@@ -14,7 +14,7 @@ struct JournalMainView: View {
 
             ZStack {
                 
-                Color.black
+                Color.backgroundPrimary
                     .ignoresSafeArea()
 
               
@@ -83,7 +83,7 @@ struct JournalMainView: View {
                 .padding(.bottom, 12)
             }
         }
-        .tint(.white)
+        .tint(.textPrimary)
         .preferredColorScheme(.dark)
     }
 }

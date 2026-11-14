@@ -11,11 +11,11 @@ struct EmptyStateView: View {
 
             Text("Begin Your Journal")
                 .font(.system(size: 28, weight: .bold))
-                .foregroundStyle(Color(red: 0.69, green: 0.60, blue: 0.99))
+                .foregroundStyle(.textAccent)
 
             Text("Craft your personal diary, tap the plus icon to begin")
                 .font(.system(size: 18, weight: .regular))
-                .foregroundStyle(.white)
+                .foregroundStyle(.textPrimary)
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -24,5 +24,5 @@ struct EmptyStateView: View {
 
 #Preview {
     EmptyStateView()
-        .background(Color.black)
+        .background(Color.backgroundPrimary)
 }

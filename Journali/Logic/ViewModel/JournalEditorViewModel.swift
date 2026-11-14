@@ -1,5 +1,5 @@
 //
-//  JournalEditerViewModel.swift
+//  JournalEditorViewModel.swift
 //  Journali
 //
 //  Created by joud on 30/05/1448 AH.

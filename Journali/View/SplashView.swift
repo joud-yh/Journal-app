@@ -5,7 +5,7 @@ struct SplashView: View {
     var body: some View {
         ZStack {
             // Background
-            Color.black
+            Color.backgroundPrimary
                 .ignoresSafeArea()
 
             // Content
@@ -21,12 +21,12 @@ struct SplashView: View {
                 // App Name
                 Text("Journali")
                     .font(.system(size: 64, weight: .bold))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(.textPrimary)
 
                 // Tagline
                 Text("Your thoughts, your story")
                     .font(.system(size: 24, weight: .regular))
-                    .foregroundStyle(Color(red: 0.64, green: 0.60, blue: 0.60))
+                    .foregroundStyle(.textSecondary)
 
                 Spacer()
             }
