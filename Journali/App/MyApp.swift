@@ -32,7 +32,6 @@ import SwiftData
                         .transition(.opacity)
                 }
             }
-            .preferredColorScheme(.dark)
             .task {
                 // Keep the Splash visible for 2 seconds, then fade to the Main page
                 try? await Task.sleep(for: .seconds(2))

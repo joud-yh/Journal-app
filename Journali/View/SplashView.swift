@@ -4,9 +4,17 @@ import SwiftUI
 struct SplashView: View {
     var body: some View {
         ZStack {
-            // Background
-            Color.backgroundPrimary
-                .ignoresSafeArea()
+            // Background: the gradient from the Splash design in Sketch (top to bottom)
+            LinearGradient(
+                stops: [
+                    .init(color: .splashGradientTop, location: 0),
+                    .init(color: .splashGradientMiddle, location: 0.55),
+                    .init(color: .splashGradientBottom, location: 1)
+                ],
+                startPoint: .top,
+                endPoint: .bottom
+            )
+            .ignoresSafeArea()
 
             // Content
             VStack(spacing: 18) {

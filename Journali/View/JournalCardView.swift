@@ -44,8 +44,12 @@ struct JournalCardView: View {
         .padding(.horizontal, 26)
         .padding(.vertical, 25)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(.surfaceCard, in: RoundedRectangle(cornerRadius: 30))
-        .shadow(color: Color(red: 143 / 255, green: 143 / 255, blue: 143 / 255).opacity(0.09), radius: 30, y: 2)
+        .background {
+            // The shadow sits on the card shape only, so the text itself gets no shadow
+            RoundedRectangle(cornerRadius: 30)
+                .fill(.surfaceCard)
+                .shadow(color: Color(red: 143 / 255, green: 143 / 255, blue: 143 / 255).opacity(0.09), radius: 30, y: 2)
+        }
     }
 }
 

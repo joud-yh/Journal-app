@@ -143,7 +143,6 @@ struct JournalMainView: View {
             }
         }
         .tint(.textPrimary)
-        .preferredColorScheme(.dark)
     }
 }
 
