@@ -1,9 +1,25 @@
 import SwiftUI
+import SwiftData
 
 @main struct MyApp: App {
 
     // true while the Splash is on screen; becomes false once to show the Main page
     @State private var isShowingSplash = true
+
+    // The database file on the device where journal entries are saved
+    private let container: ModelContainer
+
+    // Created once for the whole app, so every screen shares the same journal data
+    @State private var journalViewModel: JournalListViewModel
+
+    init() {
+        do {
+            container = try ModelContainer(for: JournalEntry.self)
+        } catch {
+            fatalError("Could not open the journal storage: \(error)")
+        }
+        _journalViewModel = State(initialValue: JournalListViewModel(context: container.mainContext))
+    }
 
     var body: some Scene {
         WindowGroup {
@@ -12,7 +28,7 @@ import SwiftUI
                     SplashView()
                         .transition(.opacity)
                 } else {
-                    JournalMainView()
+                    JournalMainView(viewModel: journalViewModel)
                         .transition(.opacity)
                 }
             }
