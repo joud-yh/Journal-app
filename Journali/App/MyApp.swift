@@ -39,6 +39,8 @@ import SwiftData
                     isShowingSplash = false
                 }
             }
+            .preferredColorScheme(.dark)
         }
+        
     }
 }

@@ -22,7 +22,7 @@ struct JournalMainView: View {
             ZStack {
 
                 Color.backgroundPrimary
-                    .ignoresSafeArea()
+                   .ignoresSafeArea()
 
 
                 // Empty State or list, decided by the real data, not a separate Bool
