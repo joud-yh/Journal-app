@@ -63,7 +63,7 @@ Journali
 
 1. Clone the repository:
    ```bash
-   https://github.com/joud-yh/Journal-app/tree/main
+   https://github.com/joud-yh/Journal-app.git
    ```
 2. Open `Journali.xcodeproj` in Xcode.
 3. Choose an iPhone simulator running iOS 27.2.
